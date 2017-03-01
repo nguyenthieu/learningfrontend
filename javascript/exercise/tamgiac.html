@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hinh tam giac</title>
+</head>
+<body>
+    <!-- Nhap du lieu tu form -->
+    <form action="">
+        canh a: <input type="text" id="a" value="3">
+        canh b: <input type="text" id="b" value="4">
+        canh c: <input type="text" id="c" value="5">
+        <button id="tinh">Tinh</button>
+    </form>
+
+    <!-- Nhap du lieu tu hop thoai -->
+    <button id="hopThoai">Hop Thoai</button>
+
+    <!-- Tinh toan -->
+    <script src="scripts/tamgiac.js"></script>
+    <script>
+    document.getElementById("tinh").onclick = function() {
+        // lay du lieu nguoi dung nhap vao
+        var c1 = Number(document.getElementById("a").value);
+        var c2 = Number(document.getElementById("b").value);
+        var c3 = Number(document.getElementById("c").value);
+        alert("Chu vi: " + chuViTamGiac(c1, c2, c3) + ", dien tich: " + dienTichTamGiac(c1, c2, c3));
+    }
+
+    document.getElementById("hopThoai").onclick = function() {
+        var a = prompt("Nhap canh a: ", 3);
+        var b = prompt("Nhap canh b: ", 4);
+        var c = prompt("Nhap canh c: ", 5);
+
+        // hien thi ket qua
+        alert("chu vi: " + chuViTamGiac(a, b, c) + ", dien tich: " + dienTichTamGiac(a, b, c));
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gia phuong trinh bac hai</title>
+</head>
+
+<body>
+    <form action="">
+        a: <input type="text" value="3" id="a"> b: <input type="text" value="4" id="b"> c: <input type="text" value="5" id="c">
+        <button id="tinh">Tinh</button>
+    </form>
+    <script src="scripts/giaiPhuongTrinh.js"></script>
+    <script>
+        document.getElementById("tinh").onclick = function() {
+            // lay du lieu nhap vao
+            var a = Number(document.getElementById("a").value);
+            var b = Number(document.getElementById("b").value);
+            var c = Number(document.getElementById("c").value);
+
+            // chay ham giaiPhuongTrinhBacHai
+            giaiPhuongTrinhBacHai(a, b, c);
+        }
+    </script>
+</body>
+
+</html>

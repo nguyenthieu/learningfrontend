@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Giai thừa, tổ hợp, chỉnh hợp</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Tính giai thừa</legend>
+            Nhập n:
+            <input type="text" value="5" id="n">
+            <button type="button" id="tinh">Tính giai thừa</button>
+        </fieldset>
+        <fieldset>
+            <legend>Tính tổ hợp - chỉnh hợp</legend>
+            Nhập:
+            <input type="text" id="nth"> Nhập k:
+            <input type="text" id="k">
+            <button id="toHop" type="button">Tính tổ hợp - chỉnh hợp</button>
+        </fieldset>
+    </form>
+    <script src="scripts/toHop.js"></script>
+    <script>
+    document.getElementById("tinh").onclick = function() {
+        var n = Number(document.getElementById("n").value);
+        alert(n + "! = " + giaiThuaLap(n));
+
+        console.log(giaiThua(3));
+    }
+
+    document.getElementById("toHop").onclick = function() {
+        var n = Number(document.getElementById("nth").value);
+        var k = Number(document.getElementById("k").value);
+        var toHop = combination(k, n);
+        var chinhHop = arrangement(k, n);
+
+        alert("Tổ hợp chập " + k + " của " + n + ": " + toHop + "\n" +
+            "Chỉnh hợp chập " + k + " của " + n + ": ", +chinhHop);
+    }
+    </script>
+</body>
+
+</html>
